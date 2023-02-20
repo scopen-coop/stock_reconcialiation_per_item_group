@@ -6,12 +6,13 @@ import frappe
 from frappe.utils import cint
 
 import erpnext
-from erpnext.stock.doctype.stock_reconciliation import get_items_for_stock_reco, get_itemwise_batch, get_item_data
+from erpnext.stock.doctype.stock_reconciliation.stock_reconciliation import get_items_for_stock_reco, get_itemwise_batch, get_item_data
 from erpnext.stock.utils import get_stock_balance
+
 
 @frappe.whitelist()
 def get_items(
-	item_group, posting_date, posting_time, company, ignore_empty_stock=False
+    item_group, posting_date, posting_time, company, ignore_empty_stock=False
 ):
     bin = frappe.qb.DocType("Bin")
     item = frappe.qb.DocType("Item")
@@ -25,7 +26,7 @@ def get_items(
         .on(wh.name == bin.warehouse)
         .where(bin.actual_qty != 0)
         .where(item.item_group == item_group)
-        .select(item.item_code,wh.name)
+        .select(item.item_code, wh.name)
     )
 
     if company:
@@ -38,12 +39,12 @@ def get_items(
         for data in datas:
 
             ignore_empty_stock = cint(ignore_empty_stock)
-            items = [frappe._dict({"item_code": data.item_code, "warehouse": data.name})]
+            items = [frappe._dict({"item_code": data[0], "warehouse": data[1]})]
 
-            if not data.item_code:
-                items = get_items_for_stock_reco(data.name, company)
+            if not data[0]:
+                items = get_items_for_stock_reco(data[1], company)
 
-            itemwise_batch_data = get_itemwise_batch(data.name, posting_date, company, data.item_code)
+            itemwise_batch_data = get_itemwise_batch(data[1], posting_date, company, data[0])
 
             for d in items:
                 if d.item_code in itemwise_batch_data:
@@ -79,4 +80,4 @@ def get_items(
 
                     res.append(args)
 
-	return res
+        return res

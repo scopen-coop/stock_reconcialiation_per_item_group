@@ -45,7 +45,7 @@ frappe.ui.form.on("Stock Reconciliation", {
 
     frappe.prompt(fields, function (data) {
       frappe.call({
-        method: "stock_reconcialiation_per_item_group.stock_reconcialiation_per_item_group.controllers.stock_reconcialiation_per_item_group.get_items",
+        method: "stock_reconcialiation_per_item_group.controllers.stock_reconcialiation_per_item_group.get_items",
         args: {
           item_group: data.item_group,
           posting_date: frm.doc.posting_date,
