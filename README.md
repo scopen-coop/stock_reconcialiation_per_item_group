@@ -1,4 +1,4 @@
-## Stock Reconcialiation Per Item Group
+## Stock Reconciliation Per Item Group
 
 Add button to Stock Reconciliation to add product by Item Group
 
