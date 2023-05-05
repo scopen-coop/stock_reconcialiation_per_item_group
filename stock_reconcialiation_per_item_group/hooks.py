@@ -36,7 +36,7 @@ app_license = "MIT"
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
-doctype_js = {"Stock Reconciliation" : "public/js/stock_reconciliation.js"}
+doctype_js = {"Stock Reconciliation": "public/js/stock_reconciliation.js"}
 
 # Home Pages
 # ----------
@@ -46,7 +46,7 @@ doctype_js = {"Stock Reconciliation" : "public/js/stock_reconciliation.js"}
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Role": "home_page"
 # }
 
 # Generators
@@ -78,11 +78,11 @@ doctype_js = {"Stock Reconciliation" : "public/js/stock_reconciliation.js"}
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
 #
 # has_permission = {
-#	"Event": "frappe.desk.doctype.event.event.has_permission",
+# 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
 # DocType Class
@@ -90,7 +90,7 @@ doctype_js = {"Stock Reconciliation" : "public/js/stock_reconciliation.js"}
 # Override standard doctype classes
 
 # override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
+# 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
 # Document Events
@@ -98,32 +98,32 @@ doctype_js = {"Stock Reconciliation" : "public/js/stock_reconciliation.js"}
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+# 	"*": {
+# 		"on_update": "method",
+# 		"on_cancel": "method",
+# 		"on_trash": "method"
+# 	}
 # }
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-#	"all": [
-#		"stock_reconcialiation_per_item_group.tasks.all"
-#	],
-#	"daily": [
-#		"stock_reconcialiation_per_item_group.tasks.daily"
-#	],
-#	"hourly": [
-#		"stock_reconcialiation_per_item_group.tasks.hourly"
-#	],
-#	"weekly": [
-#		"stock_reconcialiation_per_item_group.tasks.weekly"
-#	]
-#	"monthly": [
-#		"stock_reconcialiation_per_item_group.tasks.monthly"
-#	]
+# 	"all": [
+# 		"stock_reconcialiation_per_item_group.tasks.all"
+# 	],
+# 	"daily": [
+# 		"stock_reconcialiation_per_item_group.tasks.daily"
+# 	],
+# 	"hourly": [
+# 		"stock_reconcialiation_per_item_group.tasks.hourly"
+# 	],
+# 	"weekly": [
+# 		"stock_reconcialiation_per_item_group.tasks.weekly"
+# 	]
+# 	"monthly": [
+# 		"stock_reconcialiation_per_item_group.tasks.monthly"
+# 	]
 # }
 
 # Testing
@@ -135,14 +135,14 @@ doctype_js = {"Stock Reconciliation" : "public/js/stock_reconciliation.js"}
 # ------------------------------
 #
 # override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "stock_reconcialiation_per_item_group.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "stock_reconcialiation_per_item_group.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-#	"Task": "stock_reconcialiation_per_item_group.task.get_dashboard_data"
+# 	"Task": "stock_reconcialiation_per_item_group.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -178,5 +178,5 @@ doctype_js = {"Stock Reconciliation" : "public/js/stock_reconciliation.js"}
 # --------------------------------
 
 # auth_hooks = [
-#	"stock_reconcialiation_per_item_group.auth.validate"
+# 	"stock_reconcialiation_per_item_group.auth.validate"
 # ]
